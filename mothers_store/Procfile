@@ -1,0 +1,1 @@
+web: gunicorn mothers_store.wsgi --log-file -

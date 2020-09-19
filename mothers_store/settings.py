@@ -44,9 +44,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ],
 
-    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    # 'PAGE_SIZE': 1,
-
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
     )
@@ -70,6 +67,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
+    'https://mother-juice-frontend.herokuapp.com/',
 )
 
 ROOT_URLCONF = 'mothers_store.urls'
@@ -105,12 +103,8 @@ EMAIL_USE_TLS = True
 DATABASES = {
 
     'default': {
-        'ENGINE': os.getenv('DB_ENGINE'),
-        'NAME' : os.getenv('DB_NAME'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT' : os.getenv('DB_PORT'),
-        'USER' : os.getenv('DB_USERNAME'),
-        'PASSWORD' : os.getenv('DB_PASSWORD'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
 
 }

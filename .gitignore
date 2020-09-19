@@ -1,6 +1,4 @@
 .vscode
-.env
 .idea
 .pyc
 **/__pycache__
-images

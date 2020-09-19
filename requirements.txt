@@ -1,0 +1,15 @@
+Django==2.2.14
+djangorestframework==3.11.0
+python-dotenv==0.10.1
+gunicorn==19.9.0
+django-extensions==2.2.8
+cffi==1.14.0
+cryptography==2.8
+pycparser==2.19
+jwt==0.6.1
+PyJWT==1.4.0
+pluck==0.2
+whitenoise==5.2.0
+virtualenv==20.0.23
+django-cors-headers
+requests==2.21.0
