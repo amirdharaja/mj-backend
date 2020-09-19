@@ -19,7 +19,7 @@ class Item(models.Model):
     is_available = models.BooleanField(default=True)
     count_per_week = models.IntegerField(validators=[MinValueValidator(0),MaxValueValidator(21)])
     rate_per_bottle = models.FloatField(validators=[MinValueValidator(0.0)])
-    rate_per_week = models.FloatField(editable=False, validators=[MinValueValidator(0.0)])
+    rate_per_week = models.FloatField(validators=[MinValueValidator(0.0)])
     discount_type = models.CharField(choices=DISCOUNT_TYPE, max_length=1, default='0', null=True)
     discount = models.IntegerField(default=0, validators=[MinValueValidator(0)])
     description = models.TextField(null=True)
@@ -32,5 +32,6 @@ class Item(models.Model):
 
     def __str__(self):
         return self.name
+
     class Meta:
         db_table = "items"

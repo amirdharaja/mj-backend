@@ -137,7 +137,6 @@ class ItemAdmin(admin.ModelAdmin):
         'discount',
         'total_sales_count',
         'total_sales_amount',
-        'description',
         'created_at',
         'updated_at'
     )
