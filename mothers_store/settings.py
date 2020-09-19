@@ -63,7 +63,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    # 'https://mother-juice-frontend.herokuapp.com/',
+    'https://mother-juice-frontend.herokuapp.com/',
 )
 
 ROOT_URLCONF = 'mothers_store.urls'
