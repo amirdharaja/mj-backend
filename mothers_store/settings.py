@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 
-
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
@@ -28,7 +27,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'juice_service',
     'rest_framework',
     'rest_framework.authtoken',
@@ -43,12 +41,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
     ],
-
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.AllowAny',
     )
 }
-
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -67,7 +63,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    'https://mother-juice-frontend.herokuapp.com/',
+    # 'https://mother-juice-frontend.herokuapp.com/',
 )
 
 ROOT_URLCONF = 'mothers_store.urls'
@@ -91,15 +87,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mothers_store.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-MAILER_EMAIL_BACKEND = EMAIL_BACKEND
-EMAIL_HOST = os.getenv('EMAIL_HOST')
-EMAIL_HOST_USER = os.getenv('EMAIL_USERNAME')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
-
 DATABASES = {
 
     'default': {
@@ -108,7 +95,6 @@ DATABASES = {
     },
 
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -140,7 +126,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images/')
 MEDIA_URL = '/images/'
-
-LOGOUT_REDIRECT = "login.html"
 
 APPEND_SLASH=False
